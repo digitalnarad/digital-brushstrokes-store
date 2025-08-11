@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 import { Palette, Star, Truck, Shield } from "lucide-react";
 
 const Index = () => {
@@ -19,6 +20,10 @@ const Index = () => {
             </span>
           </div>
           <nav className="hidden md:flex items-center space-x-8">
+            <Link to="/collections" className="relative text-foreground hover:text-primary transition-all duration-300 group">
+              Collections
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+            </Link>
             <a href="#gallery" className="relative text-foreground hover:text-primary transition-all duration-300 group">
               Gallery
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
