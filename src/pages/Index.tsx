@@ -3,6 +3,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { Palette, Star, Truck, Shield } from "lucide-react";
+import { CartDropdown } from "@/components/cart/CartDropdown";
+import { AddToCartButton } from "@/components/cart/AddToCartButton";
 
 const Index = () => {
   return (
@@ -37,13 +39,16 @@ const Index = () => {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
           </nav>
-          <Button 
-            variant="outline" 
-            className="relative overflow-hidden border-primary/30 hover:border-primary hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 group"
-          >
-            <span className="relative z-10">Shop Now</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
-          </Button>
+          <div className="flex items-center gap-4">
+            <CartDropdown />
+            <Button 
+              variant="outline" 
+              className="relative overflow-hidden border-primary/30 hover:border-primary hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 group"
+            >
+              <span className="relative z-10">Shop Now</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+            </Button>
+          </div>
         </div>
       </header>
 
@@ -216,9 +221,22 @@ const Index = () => {
                   <div className="absolute bottom-6 left-6 right-6 text-white transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                     <h3 className="font-bold text-xl mb-2">Abstract Canvas #{item}</h3>
                     <p className="text-sm opacity-90 mb-3">Modern digital art • Ready to print</p>
-                    <Button size="sm" className="bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30">
-                      Preview
-                    </Button>
+                    <div className="flex gap-2">
+                      <Button size="sm" variant="outline" className="bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30">
+                        Preview
+                      </Button>
+                      <AddToCartButton
+                        item={{
+                          id: `artwork-${item}`,
+                          title: `Digital Art #${item}`,
+                          price: 29,
+                          image: `/artwork-${item}.jpg`,
+                          category: 'Abstract'
+                        }}
+                        size="sm"
+                        className="bg-primary/20 hover:bg-primary/30 backdrop-blur-sm border border-primary/30"
+                      />
+                    </div>
                   </div>
                   
                   {/* Floating Price Badge */}
