@@ -5,6 +5,7 @@ import { Separator } from "@/components/ui/separator";
 import { Link, useNavigate } from "react-router-dom";
 import { ShoppingCart, Plus, Minus, Trash2, ArrowLeft, Palette } from "lucide-react";
 import { useCart } from "@/contexts/CartContext";
+import { ModeToggle } from "@/components/mode-toggle";
 import { toast } from "@/hooks/use-toast";
 
 const Cart = () => {
@@ -55,10 +56,13 @@ const Cart = () => {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
           </nav>
-          <Badge variant="secondary" className="glass-effect border-primary/30 text-primary">
-            <ShoppingCart className="w-4 h-4 mr-2" />
-            {state.itemCount} items
-          </Badge>
+          <div className="flex items-center gap-4">
+            <ModeToggle />
+            <Badge variant="secondary" className="glass-effect border-primary/30 text-primary">
+              <ShoppingCart className="w-4 h-4 mr-2" />
+              {state.itemCount} items
+            </Badge>
+          </div>
         </div>
       </header>
 

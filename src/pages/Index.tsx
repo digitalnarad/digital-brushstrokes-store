@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Palette, Star, Truck, Shield } from "lucide-react";
 import { CartDropdown } from "@/components/cart/CartDropdown";
 import { AddToCartButton } from "@/components/cart/AddToCartButton";
+import { ModeToggle } from "@/components/mode-toggle";
 
 const Index = () => {
   return (
@@ -40,6 +41,7 @@ const Index = () => {
             </a>
           </nav>
           <div className="flex items-center gap-4">
+            <ModeToggle />
             <CartDropdown />
             <Button 
               variant="outline" 
