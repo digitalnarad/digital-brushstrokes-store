@@ -6,20 +6,11 @@ import { Palette, Star, Truck, Shield, LogIn, UserPlus } from "lucide-react";
 import { CartDropdown } from "@/components/cart/CartDropdown";
 import { AddToCartButton } from "@/components/cart/AddToCartButton";
 import { ModeToggle } from "@/components/mode-toggle";
-import { AuthModal } from "@/components/auth/AuthModal";
 import { UserMenu } from "@/components/auth/UserMenu";
 import { useAuth } from "@/contexts/AuthContext";
-import { useState } from "react";
 
 const Index = () => {
   const { user, loading } = useAuth();
-  const [authModalOpen, setAuthModalOpen] = useState(false);
-  const [authMode, setAuthMode] = useState<'signin' | 'signup'>('signin');
-
-  const openAuthModal = (mode: 'signin' | 'signup') => {
-    setAuthMode(mode);
-    setAuthModalOpen(true);
-  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -62,27 +53,29 @@ const Index = () => {
                 <UserMenu />
               ) : (
                 <div className="flex items-center gap-2">
-                  <Button 
-                    variant="ghost" 
-                    size="sm"
-                    onClick={() => openAuthModal('signin')}
-                    className="relative hover:bg-accent/10 text-foreground hover:text-primary transition-all duration-300"
-                  >
-                    <LogIn className="h-4 w-4 mr-2" />
-                    Sign In
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    size="sm"
-                    onClick={() => openAuthModal('signup')}
-                    className="relative overflow-hidden border-primary/30 hover:border-primary hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 group"
-                  >
-                    <span className="relative z-10 flex items-center">
-                      <UserPlus className="h-4 w-4 mr-2" />
-                      Sign Up
-                    </span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
-                  </Button>
+                  <Link to="/auth?mode=signin">
+                    <Button 
+                      variant="ghost" 
+                      size="sm"
+                      className="relative hover:bg-accent/10 text-foreground hover:text-primary transition-all duration-300"
+                    >
+                      <LogIn className="h-4 w-4 mr-2" />
+                      Sign In
+                    </Button>
+                  </Link>
+                  <Link to="/auth?mode=signup">
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      className="relative overflow-hidden border-primary/30 hover:border-primary hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 group"
+                    >
+                      <span className="relative z-10 flex items-center">
+                        <UserPlus className="h-4 w-4 mr-2" />
+                        Sign Up
+                      </span>
+                      <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+                    </Button>
+                  </Link>
                 </div>
               )
             )}
@@ -438,13 +431,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-
-      {/* Auth Modal */}
-      <AuthModal 
-        isOpen={authModalOpen}
-        onClose={() => setAuthModalOpen(false)}
-        initialMode={authMode}
-      />
     </div>
   );
 };

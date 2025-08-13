@@ -7,6 +7,7 @@ import { CartProvider } from "@/contexts/CartContext";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { ThemeProvider } from "@/components/theme-provider";
 import Index from "./pages/Index";
+import Auth from "./pages/Auth";
 import Collections from "./pages/Collections";
 import Category from "./pages/Category";
 import Cart from "./pages/Cart";
@@ -25,6 +26,7 @@ const App = () => (
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Index />} />
+              <Route path="/auth" element={<Auth />} />
               <Route path="/collections" element={<Collections />} />
               <Route path="/category/:categoryId" element={<Category />} />
               <Route path="/cart" element={<Cart />} />
