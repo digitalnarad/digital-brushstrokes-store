@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 220 14% 11%;
 
-    --primary: 35 100% 50%;
+    --primary: 271 76% 53%;
     --primary-foreground: 0 0% 98%;
 
     --secondary: 220 14% 96%;
@@ -26,26 +26,26 @@ All colors MUST be HSL.
     --muted: 220 14% 96%;
     --muted-foreground: 220 9% 46%;
 
-    --accent: 35 100% 97%;
-    --accent-foreground: 35 100% 50%;
+    --accent: 271 76% 97%;
+    --accent-foreground: 271 76% 53%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 35 100% 50%;
+    --ring: 271 76% 53%;
 
     --radius: 0.75rem;
     
     /* Art-specific design tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(35 100% 50%) 0%, hsl(25 100% 55%) 50%, hsl(15 100% 60%) 100%);
-    --gradient-accent: linear-gradient(90deg, hsl(35 100% 97%) 0%, hsl(25 100% 97%) 100%);
-    --gradient-aurora: linear-gradient(135deg, hsl(35 100% 50% / 0.1) 0%, hsl(25 100% 55% / 0.1) 25%, hsl(45 100% 45% / 0.1) 50%, hsl(30 100% 52% / 0.1) 75%, hsl(35 100% 50% / 0.1) 100%);
-    --gradient-glass: linear-gradient(135deg, hsl(35 100% 50% / 0.1) 0%, hsl(35 100% 50% / 0.05) 100%);
-    --shadow-elegant: 0 20px 60px -10px hsl(35 100% 50% / 0.4);
+    --gradient-hero: linear-gradient(135deg, hsl(271 76% 53%) 0%, hsl(262 83% 58%) 50%, hsl(233 89% 64%) 100%);
+    --gradient-accent: linear-gradient(90deg, hsl(271 76% 97%) 0%, hsl(262 83% 97%) 100%);
+    --gradient-aurora: linear-gradient(135deg, hsl(271 76% 53% / 0.1) 0%, hsl(262 83% 58% / 0.1) 25%, hsl(233 89% 64% / 0.1) 50%, hsl(290 76% 53% / 0.1) 75%, hsl(271 76% 53% / 0.1) 100%);
+    --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.1) 0%, hsl(0 0% 100% / 0.05) 100%);
+    --shadow-elegant: 0 20px 60px -10px hsl(271 76% 53% / 0.4);
     --shadow-card: 0 8px 32px -8px hsl(220 14% 11% / 0.15);
-    --shadow-glow: 0 0 40px hsl(35 100% 50% / 0.3);
+    --shadow-glow: 0 0 40px hsl(271 76% 53% / 0.3);
     --blur-glass: blur(16px);
     
     /* Animation variables */
@@ -79,7 +79,7 @@ All colors MUST be HSL.
     --popover: 220 14% 4%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 35 100% 50%;
+    --primary: 271 76% 53%;
     --primary-foreground: 0 0% 98%;
 
     --secondary: 220 14% 15%;
@@ -88,24 +88,24 @@ All colors MUST be HSL.
     --muted: 220 14% 15%;
     --muted-foreground: 220 9% 65%;
 
-    --accent: 35 100% 15%;
-    --accent-foreground: 35 100% 85%;
+    --accent: 271 76% 15%;
+    --accent-foreground: 271 76% 85%;
 
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 220 14% 15%;
     --input: 220 14% 15%;
-    --ring: 35 100% 50%;
+    --ring: 271 76% 53%;
     
     /* Dark mode art-specific tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(35 100% 50%) 0%, hsl(25 100% 55%) 50%, hsl(15 100% 60%) 100%);
-    --gradient-accent: linear-gradient(90deg, hsl(35 100% 15%) 0%, hsl(25 100% 15%) 100%);
-    --gradient-aurora: linear-gradient(135deg, hsl(35 100% 50% / 0.2) 0%, hsl(25 100% 55% / 0.2) 25%, hsl(45 100% 45% / 0.2) 50%, hsl(30 100% 52% / 0.2) 75%, hsl(35 100% 50% / 0.2) 100%);
-    --gradient-glass: linear-gradient(135deg, hsl(35 100% 50% / 0.05) 0%, hsl(35 100% 50% / 0.02) 100%);
-    --shadow-elegant: 0 20px 60px -10px hsl(35 100% 50% / 0.5);
+    --gradient-hero: linear-gradient(135deg, hsl(271 76% 53%) 0%, hsl(262 83% 58%) 50%, hsl(233 89% 64%) 100%);
+    --gradient-accent: linear-gradient(90deg, hsl(271 76% 15%) 0%, hsl(262 83% 15%) 100%);
+    --gradient-aurora: linear-gradient(135deg, hsl(271 76% 53% / 0.2) 0%, hsl(262 83% 58% / 0.2) 25%, hsl(233 89% 64% / 0.2) 50%, hsl(290 76% 53% / 0.2) 75%, hsl(271 76% 53% / 0.2) 100%);
+    --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.05) 0%, hsl(0 0% 100% / 0.02) 100%);
+    --shadow-elegant: 0 20px 60px -10px hsl(271 76% 53% / 0.5);
     --shadow-card: 0 8px 32px -8px hsl(0 0% 0% / 0.3);
-    --shadow-glow: 0 0 40px hsl(35 100% 50% / 0.4);
+    --shadow-glow: 0 0 40px hsl(271 76% 53% / 0.4);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
